@@ -1,7 +1,7 @@
 let nombre = prompt ("Por favor, ingrese su nombre y apellido")
 alert ("Hola" + " " + nombre)
 
-let terapia = prompt ("Que tipo de terapia desea agendar? Le recordamos que disponemos terapias de, (barras, imanes, psicoanaliticas, conductuales, gestalticas)")
+let terapia = prompt ("Que tipo de terapia desea agendar? Le recordamos que disponemos terapias de, (barras, imanes, psicoanaliticas, conductuales, gestalticas) Para terminar coloque 'salir' ")
 while (terapia != "Barras"){
     switch(terapia){
         case "imanes":
@@ -36,6 +36,6 @@ while (terapia != "Barras"){
             alert("La terapia ingresada no existe")
             break
     }
-    terapia = prompt ("Que tipo de terapia desea agendar? Le recordamos que disponemos terapias de barras, imanes, psicoanaliticas, conductuales, gestalticas")
+    terapia = prompt ("Que tipo de terapia desea agendar? Le recordamos que disponemos terapias de, (barras, imanes, psicoanaliticas, conductuales, gestalticas) Para terminar coloque 'salir' ")
  }
-alert ("Actualmente no hay turnos disponibles en barras, disculpe.")
+alert ("Actualmente no hay turnos disponibles en barras, disculpe. Para terminar coloque 'salir' ")
