@@ -40,12 +40,12 @@ while (terapia != "salir"){
             alert("te esperamos! porfavor respete el horario escogido")
             break
         default:
-            alert("La terapia ingresada no existe, recuerde que puede colocar 'salir' para finalizar")
+            alert("La terapia ingresada no existe, recuerde que puede colocar 'salir' para finalizar").toLowerCase()
             break
     }
-    terapia = prompt ("Que tipo de terapia desea agendar? Le recordamos que disponemos terapias de, (barras, imanes, psicoanaliticas, conductuales, gestalticas) Para terminar coloque 'salir' ")
+    terapia = prompt ("Que tipo de terapia desea agendar? Le recordamos que disponemos terapias de, (barras, imanes, psicoanaliticas, conductuales, gestalticas) Para terminar coloque 'salir' ").toLocaleLowerCase()
  }
- alert ("Usted puede pagar una terapia de forma semestral en la cual recibira un descuento ya que, cada sesion tendra un valor de $1500 es decir un 30% menos del valor actual de la sesion")
+ alert ("Usted puede pagar una terapia de forma semestral en la cual recibira un descuento ya que, cada sesion tendra un valor de $1500 es decir un 30% menos del valor actual de la sesion").toLocaleLowerCase()
  alert("El valor semestral actual es de $36000 y puede variar el costo con tarjetas de credito pudiendo ser financiadas en hasta 12 cuotas, de contado serian " + " " + cuota(36000,15,12))
  function cuota (credito, interes, meses){
      let cuota = credito *(1 + interes/100)/meses
@@ -54,9 +54,9 @@ while (terapia != "salir"){
  console.log(calcInteres ("macro"))
  function calcInteres (banco){
      switch(banco){
-         case "bvva":
+         case "bbva":
             return 25
-         case "HSBC":
+         case "hsvc":
              return 23
          case "santander" :
              return 22
@@ -65,5 +65,5 @@ while (terapia != "salir"){
      }
  }
  function mostrar (banco, credito, interes, cuota,meses){
-    document.writ(`el credito del banco ${banco} es de ${credito} con un interes de ${interes} a pagar en cuotas de ${cuota} durante ${meses}`)
+    console.log(`el credito del banco ${banco} es de ${credito} con un interes de ${interes} a pagar en cuotas de ${cuota} durante ${meses}`)
  }
