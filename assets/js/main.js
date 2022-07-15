@@ -67,3 +67,50 @@ while (terapia != "salir"){
  function mostrar (banco, credito, interes, cuota,meses){
     document.writ(`el credito del banco ${banco} es de ${credito} con un interes de ${interes} a pagar en cuotas de ${cuota} durante ${meses}`)
  }
+
+ class Producto {
+    objeto (nombre, precio) {
+        this.nombre = nombre.toUppercase();
+        this.precio = parseFloat(precio);
+        this.vendido = false;
+    }
+    sumaIva() {
+        this.precio = this.precio * 1.21;
+    }
+ }
+ const productos = [];
+ productos.push (new Producto ("padecientes", "3500"));
+ productos.push (new Producto ("el lado b del amor", "4200"));
+ productos.push(new Producto("el precio de la pasion", "4100"));
+
+ for (const producto of producto )
+ producto.sumaIva();
+
+ alert ("le recordamos que por ser pasiente puede llevarse uno de los libros del salon, aceptamos todos los medios de pago, recuerde que abonando en un solo pago en efectivo o por transferencia bancaria usted tendra un 15% de descuento sobre el valor final del libro + iva.")
+let ofertas = prompt ("Si desea uno de los libros indique cual (padecientes, palabras cruzadas, el precio de la pasion)si no esta interesado en ninguno simplemente coloque salir")
+
+ while (terapia != "salir"){
+    switch(terapia){
+        case "padecientes":
+            let padecientes = prompt("El valor del libro es de 3500 +  iva.").toLowerCase()
+            while(padecientes == ""){
+                padecientes = prompt("El valor del libro es de 3500 +  iva.").toLowerCase()
+            }
+            alert ("El dia de su sesion dirijase a administracion y sera dado su libro y realizada la transaccion de su pago.")
+            break
+            case "palabras cruzadas":
+                let palabras_cruzadas = prompt("El valor del libro es de 3500 +  iva.").toLowerCase()
+                while(palabras_cruzadas == ""){
+                    palabras_cruzadas = prompt("El valor del libro es de 4200 +  iva.").toLowerCase()
+                }
+                alert ("El dia de su sesion dirijase a administracion y sera dado su libro y realizada la transaccion de su pago.")
+                break
+                case "el precio de la pasion":
+                    let el_precio_de_la_pasion = prompt("El valor del libro es de 3500 +  iva.").toLowerCase()
+                    while(el_precio_de_la_pasion == ""){
+                        el_precio_de_la_pasion = prompt("El valor del libro es de 4100 +  iva.").toLowerCase()
+                    }
+                    alert ("El dia de su sesion dirijase a administracion y sera dado su libro y realizada la transaccion de su pago.")
+                    break
+        }
+    }
